@@ -11,7 +11,13 @@ Resources:
       Environment:
         Variables:
           TELEGRAM_CHAT_ID: 12345678
-          TELEGRAM_BOT_TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+          TELEGRAM_BOT_TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      Events:
+        CronEvent:
+          Type: Schedule
+          Properties:
+            Schedule: rate(X minutes)
+            Input: '{}'
 
 Outputs:
   DribbbleSlackBotFunction:

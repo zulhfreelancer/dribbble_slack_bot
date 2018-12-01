@@ -7,6 +7,7 @@ Tools & references:
 - [AWS CLI](https://aws.amazon.com/cli/)
 - [AWS SAM CLI](https://github.com/awslabs/aws-sam-cli)
 - [AWS Lambda Ruby Tutorial](https://aws.amazon.com/blogs/compute/announcing-ruby-support-for-aws-lambda/)
+- [Schedule AWS Lambda Execution](https://docs.aws.amazon.com/lambda/latest/dg/with-scheduledevents-example-use-app-spec.html)
 
 **Note**
 

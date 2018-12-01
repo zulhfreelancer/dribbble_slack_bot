@@ -26,7 +26,7 @@ echo "Step 3/4 - Deploying artifacts..."
 echo "============================================================================"
 sam deploy \
   --template-file $DIR/packaged-template.yaml \
-  --stack-name dribbbleSlackBotFunction \
+  --stack-name DribbbleSlackBotDevV1 \
   --capabilities CAPABILITY_IAM
 printf "// Done\n\n"
 
@@ -35,7 +35,9 @@ printf "// Done\n\n"
 echo "============================================================================"
 echo "Step 4/4 - Clean up..."
 echo "============================================================================"
-find $DIR -type f -not \( -name "*.sh" -o -name "*.yaml" \) -delete
+find $DIR -type f -not \( -name "*.sh" -o -name "*.yaml" -o -name ".gitignore" -o -name "*.example" \) -delete
 rm -f $DIR/packaged-template.yaml
 rm -rf $DIR/.bundle $DIR/vendor
 printf "// Done\n\n"
+
+echo "Finished. Check logs above and make sure no errors produced."
