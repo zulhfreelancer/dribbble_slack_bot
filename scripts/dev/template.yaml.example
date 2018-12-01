@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Dribbble Slack Bot Lambda'
+
+Resources:
+  DribbbleSlackBotFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: lambda.hello
+      Runtime: ruby2.5
+      Environment:
+        Variables:
+          TELEGRAM_CHAT_ID: 12345678
+          TELEGRAM_BOT_TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
+Outputs:
+  DribbbleSlackBotFunction:
+    Description: Dribbble Slack Bot Lambda ARN
+    Value:
+      Fn::GetAtt:
+      - DribbbleSlackBotFunction
+      - Arn
